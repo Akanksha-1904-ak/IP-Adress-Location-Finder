@@ -1,0 +1,137 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app {
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* Dark mode support */
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark .info,
+.dark .search,
+.dark .header {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Toggle styling */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+/* Search input and button */
+.search {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* IP info section */
+.info {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.dark .info {
+  background-color: #222;
+}
+
+.ip {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* History list */
+.history {
+  margin-top: 15px;
+}
+
+.history ul {
+  list-style-type: disc;
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+/* Map container */
+.map-container {
+  margin-top: 25px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
